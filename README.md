@@ -1,2 +1,2 @@
 # rubyHW
-git
+ruby cources
