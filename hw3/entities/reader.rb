@@ -1,13 +1,11 @@
 class Reader
     attr_reader :name, :age, :address, :phone, :email
     
+    FIRST_PHONE_CHAR = '+'.freeze
+    MIN_AGE = 18
+
     def initialize(name, age, address, phone, email)
-        unless validAge?(age) 
-            raise "Not valid age"
-        end    
-        unless validPhone?(phone)
-            raise "Not valid phone"
-        end    
+        validate(age, phone)
         @name = name
         @age = age
         @address = address   
@@ -15,13 +13,18 @@ class Reader
         @email = email
     end
 
+    def validate(age, phone)
+        raise 'Not valid age' unless validAge?(age)
+        raise 'Not valid phone' unless validPhone?(phone)
+    end    
+
     def validAge?(age)
-        return true if (age > 18)
+        return true if (age > MIN_AGE)
         false
     end
 
     def validPhone?(phone)
-        return true if (phone[0,1] == '+')
+        return true if (phone.chars.first == FIRST_PHONE_CHAR)
         false
     end
 
@@ -30,7 +33,7 @@ class Reader
     end    
 
     def ==(other)
-        return false unless self.class == other.class
+        return unless self.class == other.class
         return self.name == other.name && 
                self.age == other.age &&
                self.address == other.address &&

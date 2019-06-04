@@ -13,7 +13,7 @@ class Order
     end  
 
     def ==(other)
-        return false unless self.class == other.class
+        return unless self.class == other.class
         return self.date == other.date && 
                self.reader == other.reader &&
                self.book == other.book

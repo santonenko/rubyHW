@@ -1,7 +1,9 @@
 class Book
     attr_reader :title, :author, :description
     
-    def initialize(title, author, description="very interesting book")
+    DEFAULT_DESCRIPTION = 'very interesting book'.freeze
+
+    def initialize(title, author, description = DEFAULT_DESCRIPTION)
         @title = title
         @author = author    
         @description = description
@@ -12,7 +14,7 @@ class Book
     end  
 
     def ==(other)
-        return false unless self.class == other.class
+        return unless self.class == other.class
         return self.title == other.title && 
                self.author == other.author
     end

@@ -1,22 +1,22 @@
 ---
-authors:
+:authors:
 - &1 !ruby/object:Author
   name: J.Rolling
-  yearOfBirth: 1965
+  year_of_birth: 1965
   biography: tratata1
 - &2 !ruby/object:Author
   name: A.Puskin
-  yearOfBirth: 1799
+  year_of_birth: 1799
   biography: tratata2
 - &3 !ruby/object:Author
   name: M.Lermontov
-  yearOfBirth: 1814
+  year_of_birth: 1814
   biography: tratata3
 - &4 !ruby/object:Author
   name: A.Chehov
-  yearOfBirth: 1860
+  year_of_birth: 1860
   biography: tratata3
-books:
+:books:
 - &6 !ruby/object:Book
   title: Harry Potter
   author: *1
@@ -65,7 +65,7 @@ books:
   title: Student
   author: *4
   description: very interesting book
-readers:
+:readers:
 - &5 !ruby/object:Reader
   name: Petrov
   age: 20
@@ -108,7 +108,7 @@ readers:
   address: Mironova, 28
   phone: "+38078990"
   email: my7@comp.ua
-orders:
+:orders:
 - !ruby/object:Order
   date: 2019-05-31 00:00:00.000000000 +03:00
   reader: *5
