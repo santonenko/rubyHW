@@ -13,15 +13,15 @@ class Author
     end
 
     def validate(name, year_of_birth)
-        raise 'Not valid name' unless validName?(name)
-        raise 'Not valid year_of_birth' unless validyear_of_birth?(year_of_birth)
+        raise 'Not valid name' unless valid_name?(name)
+        raise 'Not valid year_of_birth' unless valid_year_of_birth?(year_of_birth)
     end    
 
-    def validName?(name)
+    def valid_name?(name)
         (MIN_CHARS..MAX_CHARS).include?(name.length)
     end
 
-    def validyear_of_birth?(year_of_birth)
+    def valid_year_of_birth?(year_of_birth)
         year_of_birth < Time.now.year
     end
 

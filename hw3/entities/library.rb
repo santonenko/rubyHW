@@ -78,11 +78,11 @@ class Library
     end
 
     # first way for serialization
-    def save_one(filename)
+    def save_first_way(filename)
         open(filename, 'w') {|f| YAML.dump(to_h, f)}
     end
 
-    def load_one(filename)
+    def load_first_way(filename)
         h = open(filename) {|f| YAML.load(f) }
         @authors = h[:authors]
         @books =   h[:books] 
@@ -91,7 +91,7 @@ class Library
     end
 
     # second way for serialization
-    def save_two(filename)
+    def save_second_way(filename)
         store = YAML::Store.new(filename)
         store.transaction do
             store[:authors] = authors
@@ -101,7 +101,7 @@ class Library
         end
     end
 
-    def load_two(filename)
+    def load_second_way(filename)
         store = YAML::Store.new(filename)
         store.transaction do
             @authors = store[:authors]

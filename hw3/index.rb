@@ -158,7 +158,7 @@ puts 'Count readers who took top ' + 3.to_s + ' of the most popular books: ' +
 puts '================='
 puts 'demo for library store/load'
 puts '========'
-library.save_one('archive/store1.yml')     
+library.save_first_way('archive/store1.yml')     
 
 library2 = Library.new
 authors = []
@@ -184,11 +184,11 @@ library2.add(orders)
 puts '=======library2========='
 puts library2
 
-library2.save_two('archive/store2.yml')     
-library.load_two('archive/store2.yml')
+library2.save_second_way('archive/store2.yml')     
+library.load_second_way('archive/store2.yml')
 
 puts '=======library after load from library2========='
 puts library
 puts '=======library after restore ========='
-library.load_one('archive/store1.yml')
+library.load_first_way('archive/store1.yml')
 puts library

@@ -1,2 +1,2 @@
-cd /cygdrive/x - перейти на диск x
+cd /cygdrive/x - goto drive x
 cd ruby/rubyHW/hw3

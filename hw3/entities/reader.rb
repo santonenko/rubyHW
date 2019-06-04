@@ -14,18 +14,16 @@ class Reader
     end
 
     def validate(age, phone)
-        raise 'Not valid age' unless validAge?(age)
-        raise 'Not valid phone' unless validPhone?(phone)
+        raise 'Not valid age' unless valid_age?(age)
+        raise 'Not valid phone' unless valid_phone?(phone)
     end    
 
-    def validAge?(age)
-        return true if (age > MIN_AGE)
-        false
+    def valid_age?(age)
+        age > MIN_AGE
     end
 
-    def validPhone?(phone)
-        return true if (phone.chars.first == FIRST_PHONE_CHAR)
-        false
+    def valid_phone?(phone)
+        phone.chars.first == FIRST_PHONE_CHAR
     end
 
     def to_s
