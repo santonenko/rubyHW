@@ -3,6 +3,8 @@ require 'yaml/store'
 class Library
     attr_reader :authors, :books, :readers, :orders
     
+    DEFAULT_TOP_VALUE = 3
+
     def initialize
         @authors = Array.new
         @books =   []   
@@ -42,20 +44,20 @@ class Library
         value = h.max_by { |k, v| v }[0]
     end
     
-    def top_popular_books(top = 3)
+    def top_popular_books(top = DEFAULT_TOP_VALUE)
         h = {}
         orders.each{|elem| h[elem.book]= h[elem.book] ? h[elem.book] + 1 : 1}
         value = h.max_by(top) { |k, v| v }.to_h.keys
     end
 
-    def top_active_readers(top = 3)
+    def top_active_readers(top = DEFAULT_TOP_VALUE)
         h = {}
         orders.each{|elem| h[elem.reader]= h[elem.reader] ? h[elem.reader] + 1 : 1}
         value = h.max_by(top) { |k, v| v }.to_h.keys
         value.join("\n")
     end   
 
-    def count_readers_who_took_top_popular(top = 3)
+    def count_readers_who_took_top_popular(top = DEFAULT_TOP_VALUE)
         # Array of top popular books
         books = top_popular_books(top)
         # Hash [reader => books]
