@@ -1,0 +1,255 @@
+---
+:authors:
+- &1 !ruby/object:Author
+  name: J.Rolling
+  year_of_birth: 1965
+  biography: tratata1
+- &2 !ruby/object:Author
+  name: A.Puskin
+  year_of_birth: 1799
+  biography: tratata2
+- &3 !ruby/object:Author
+  name: M.Lermontov
+  year_of_birth: 1814
+  biography: tratata3
+- &4 !ruby/object:Author
+  name: A.Chehov
+  year_of_birth: 1860
+  biography: tratata3
+:books:
+- &6 !ruby/object:Book
+  title: Harry Potter
+  author: *1
+  description: very interesting book
+- &8 !ruby/object:Book
+  title: Evgenyi Onegin
+  author: *2
+  description: very interesting book
+- &9 !ruby/object:Book
+  title: Dubrovskyi
+  author: *2
+  description: very interesting book
+- &10 !ruby/object:Book
+  title: Vystrel
+  author: *2
+  description: very interesting book
+- &11 !ruby/object:Book
+  title: Parus
+  author: *3
+  description: very interesting book
+- &13 !ruby/object:Book
+  title: Mtsyri
+  author: *3
+  description: very interesting book
+- &14 !ruby/object:Book
+  title: Borodino
+  author: *3
+  description: very interesting book
+- &16 !ruby/object:Book
+  title: Dyadya Vanya
+  author: *4
+  description: very interesting book
+- &17 !ruby/object:Book
+  title: Khameleon
+  author: *4
+  description: very interesting book
+- &18 !ruby/object:Book
+  title: Kashtanka
+  author: *4
+  description: very interesting book
+- &21 !ruby/object:Book
+  title: Malchiki
+  author: *4
+  description: very interesting book
+- &22 !ruby/object:Book
+  title: Student
+  author: *4
+  description: very interesting book
+:readers:
+- &5 !ruby/object:Reader
+  name: Petrov
+  age: 20
+  address: Geroev, 3
+  phone: "+38063222"
+  email: my@comp.ua
+- &7 !ruby/object:Reader
+  name: Petrov2
+  age: 20
+  address: Geroev, 3
+  phone: "+38063333"
+  email: my@comp.ua
+- &12 !ruby/object:Reader
+  name: Ivanov
+  age: 30
+  address: Mironova, 2
+  phone: "+380334677"
+  email: my3@comp.ua
+- &15 !ruby/object:Reader
+  name: Sidorov
+  age: 40
+  address: K.Marksa, 25
+  phone: "+38012345"
+  email: my4@comp.ua
+- &19 !ruby/object:Reader
+  name: Egorov
+  age: 25
+  address: Mironova, 20
+  phone: "+38078990"
+  email: my5@comp.ua
+- &20 !ruby/object:Reader
+  name: Egorov2
+  age: 26
+  address: Mironova, 26
+  phone: "+3808989"
+  email: my6@comp.ua
+- &23 !ruby/object:Reader
+  name: Egorov3
+  age: 28
+  address: Mironova, 28
+  phone: "+38078990"
+  email: my7@comp.ua
+:orders:
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *5
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *7
+  book: *8
+- !ruby/object:Order
+  date: 2019-05-20 00:00:00.000000000 +03:00
+  reader: *5
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *5
+  book: *8
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *5
+  book: *9
+- !ruby/object:Order
+  date: 2019-05-10 00:00:00.000000000 +03:00
+  reader: *7
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-20 00:00:00.000000000 +03:00
+  reader: *7
+  book: *9
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *7
+  book: *10
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *7
+  book: *11
+- !ruby/object:Order
+  date: 2019-05-10 00:00:00.000000000 +03:00
+  reader: *12
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-20 00:00:00.000000000 +03:00
+  reader: *12
+  book: *10
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *12
+  book: *11
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *12
+  book: *13
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *12
+  book: *14
+- !ruby/object:Order
+  date: 2019-05-10 00:00:00.000000000 +03:00
+  reader: *15
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-20 00:00:00.000000000 +03:00
+  reader: *15
+  book: *14
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *15
+  book: *16
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *15
+  book: *17
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *15
+  book: *18
+- !ruby/object:Order
+  date: 2019-05-10 00:00:00.000000000 +03:00
+  reader: *19
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-20 00:00:00.000000000 +03:00
+  reader: *19
+  book: *8
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *19
+  book: *16
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *19
+  book: *17
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *19
+  book: *18
+- !ruby/object:Order
+  date: 2019-05-10 00:00:00.000000000 +03:00
+  reader: *20
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-20 00:00:00.000000000 +03:00
+  reader: *20
+  book: *8
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *20
+  book: *16
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *20
+  book: *18
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *20
+  book: *21
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *20
+  book: *22
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *20
+  book: *18
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *20
+  book: *6
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *20
+  book: *8
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *23
+  book: *21
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *23
+  book: *22
+- !ruby/object:Order
+  date: 2019-05-30 00:00:00.000000000 +03:00
+  reader: *23
+  book: *10

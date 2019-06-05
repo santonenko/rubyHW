@@ -1,0 +1,93 @@
+---
+authors:
+- &1 !ruby/object:Author
+  name: J.Rolling
+  year_of_birth: 1965
+  biography: tratata1
+- &2 !ruby/object:Author
+  name: A.Puskin
+  year_of_birth: 1799
+  biography: tratata2
+books:
+- &4 !ruby/object:Book
+  title: Harry Potter
+  author: *1
+  description: very interesting book
+- &6 !ruby/object:Book
+  title: Evgenyi Onegin
+  author: *2
+  description: very interesting book
+readers:
+- &3 !ruby/object:Reader
+  name: Petrov
+  age: 20
+  address: Geroev, 3
+  phone: "+38063222"
+  email: my@comp.ua
+- &5 !ruby/object:Reader
+  name: Petrov2
+  age: 20
+  address: Geroev, 3
+  phone: "+38063333"
+  email: my@comp.ua
+- !ruby/object:Reader
+  name: Ivanov
+  age: 30
+  address: Mironova, 2
+  phone: "+380334677"
+  email: my3@comp.ua
+orders:
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *3
+  book: *4
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *5
+  book: *6
+:authors:
+- &7 !ruby/object:Author
+  name: J.Rolling
+  year_of_birth: 1965
+  biography: tratata1
+- &8 !ruby/object:Author
+  name: A.Puskin
+  year_of_birth: 1799
+  biography: tratata2
+:books:
+- &10 !ruby/object:Book
+  title: Harry Potter
+  author: *7
+  description: very interesting book
+- &12 !ruby/object:Book
+  title: Evgenyi Onegin
+  author: *8
+  description: very interesting book
+:readers:
+- &9 !ruby/object:Reader
+  name: Petrov
+  age: 20
+  address: Geroev, 3
+  phone: "+38063222"
+  email: my@comp.ua
+- &11 !ruby/object:Reader
+  name: Petrov2
+  age: 20
+  address: Geroev, 3
+  phone: "+38063333"
+  email: my@comp.ua
+- !ruby/object:Reader
+  name: Ivanov
+  age: 30
+  address: Mironova, 2
+  phone: "+380334677"
+  email: my3@comp.ua
+:orders:
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *9
+  book: *10
+- !ruby/object:Order
+  date: 2019-05-31 00:00:00.000000000 +03:00
+  reader: *11
+  book: *12
